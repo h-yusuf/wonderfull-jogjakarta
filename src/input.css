@@ -126,3 +126,9 @@ body{
   .input:checked + .slider:before {
     transform: translateX(30px);
   }
+  .sp-1{
+    animation: bounce 3s infinite  ;
+  }
+  .sp-2{
+    animation: bounce 4s infinite  ;
+  }
