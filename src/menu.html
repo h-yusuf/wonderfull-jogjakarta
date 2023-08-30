@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <title>Wonderfull Jogjakarta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+<body class="grid gap-12">
+
+    <!-- navbar -->
+
+    <nav class="px-8 py-1 sticky w-full top-0 linear-navbar flex justify-between items-center z-50">
+        <div class="flex gap-4">
+            <img src="/asset/logo-jogja.svg" alt="" class="w-8">
+            <img src="/asset/wonderfull .svg" alt="" class="w-18 mt-2">
+        </div>
+        <div class="flex gap-4">
+            <ul class="flex gap-10">
+                <li class="text-white font-bold font-roboto flex gap-2 items-center"><a href="">About Us</a></li>
+                <li class="text-white font-bold font-roboto flex gap-2 items-center"><a href="">Contact</a></li>
+                <li class="text-white font-bold font-roboto flex gap-2 items-center" id="dropdownHoverButton"
+                    data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover"><a href="">Home</a>
+                    <svg class="w-3 h-3 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 16 10">
+                        <path
+                            d="M15.434 1.235A2 2 0 0 0 13.586 0H2.414A2 2 0 0 0 1 3.414L6.586 9a2 2 0 0 0 2.828 0L15 3.414a2 2 0 0 0 .434-2.179Z" />
+                    </svg>
+                </li>
+                <div id="dropdownHover" style="top:32px; --tw-bg-opacity:50%;"
+                    class="z-10 hidden  bg-blue-600 bg-opacity-5  divide-gray-100  shadow w-24">
+                    <ul class=" text-sm text-white" aria-labelledby="dropdownHoverButton">
+                        <li>
+                            <a href="/index.html" class="block px-4 py-2 hover:scale-110 hover:font-extrabold">Home</a>
+                        </li>
+                        <li>
+                            <a href="/src/menu.html"
+                                class="block px-4 py-2 hover:scale-110 hover:font-extrabold">Menu</a>
+                        </li>
+                    </ul>
+                </div>
+            </ul>
+            <!-- <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+            </button> -->
+            <label class="switch ">
+                <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <g fill="#ffd43b">
+                            <circle r="5" cy="12" cx="12"></circle>
+                            <path
+                                d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z">
+                            </path>
+                        </g>
+                    </svg></span>
+                <span class="moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                        <path
+                            d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+                        </path>
+                    </svg></span>
+                <input type="checkbox" class="input">
+                <span class="slider"></span>
+            </label>
+
+
+        </div>
+    </nav>
+
+    <!-- konten  -->
+
+    <div id="scroll" class="heding">
+        <h1 class="text-8xl -mb-8 font-gread-vibes grid justify-items-center items-center text-yellow-400">Wonderfull
+        </h1>
+        <h1 style="letter-spacing: 0.30em;"
+            class="text-8xl font-roboto grid justify-items-center font-semibold items-center text-white">YOGYAKARTA</h1>
+    </div>
+
+    <!-- bar-button -->
+
+    <div class="fixed bottom-4 right-4 grid gap-4 z-50 text-white">
+        <ion-icon class="w-8 h-8" name="bus-outline"></ion-icon>
+        <a href="#scroll" class="transition-all duration-300 ease-in ">
+            <ion-icon class="w-8 h-8" name="arrow-up-circle-outline"></ion-icon>
+        </a>
+    </div>
+
+    <!-- konten -->
+
+    <div class="px-12 grid gap-4">
+        <div class="flex justify-between items-center">
+            <h1 class="text-4xl font-bold text-white font-roboto">Our <span class="text-blue-600">Regencys</span></h1>
+            <div class="h-2 w-1/4 bg-blue-600 rounded-lg"></div>
+        </div>
+        <div class="flex gap-2 overflow-auto">
+            <img class="hover:bg-black hover:backdrop-blur-sm " style="" src="/asset/menu-konten/yogyakarta.png" alt="">
+            <img src="/asset/menu-konten/sleman.png" alt="">
+            <img src="/asset/menu-konten/bantul.png" alt="">
+            <img src="/asset/menu-konten/kulonprogo.png" alt="">
+            <img src="/asset/menu-konten/gunkid.png" alt="">
+        </div>
+        <div class="flex justify-center">
+            <p class="text-center text-white text-xl">
+                Yogyakarta memiliki 5 Kabupaten diantaranya yaitu Yogyakarta/Kotamadya, Bantul, Gunung Kidul, Kulon
+                Progo dan Sleman. Ada banyak alasan mengapa menghabiskan waktu liburan di jogja Biaya murah,
+                Transportasi mudah, Surganya spot wisata alam, Wisata pantai, Wisata goa, Budaya, Education, Sejarah dan
+                masih banyak lagi ditambah banyak sekali tempat tempat wisata jogja terbaru 2023 yang sedang hits
+                sekarang ini.
+            </p>
+        </div>
+    </div>
+    <div class="grid grid-cols-2 px-20 py-32">
+        <div class="grid gap-6 text-white py-10">
+            <h1 class="text-6xl grid items-end">
+                Kotamadya
+                <div class="h-2 w-1/2 bg-blue-600 rounded-lg"></div>
+            </h1>
+            <p class="items-start text-lg">Posisi Kota Yogyakarta sebagai ibukota Kesultanan Yogyakarta menjadikan kota
+                ini
+                memiliki banyak tempat
+                bersejarah . Berikut kita sajikan tempat rekomendasinya
+            </p>
+            <div class="relative h-full w-full">
+                <button class="bg-blue-600 bg-opacity-50 rounded-lg absolute px-8 py-2">
+                    <a class="text-2xl " href="/src/menu.html">Get More</a>
+                </button>
+            </div>
+        </div>
+        <div class="flex justify-end h-full">
+            <div id="gallery" class="relative w-1/2 " data-carousel="slide">
+                <!-- Carousel wrapper -->
+                <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                    <!-- Item 1 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="/asset/menu-konten/jogjakarta/v1.png"
+                            class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="">
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                        <img src="/asset/menu-konten/jogjakarta/v4.png"
+                            class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="">
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                        <img src="/asset/menu-konten/jogjakarta/v3.png"
+                            class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="">
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                        <img src="/asset/menu-konten/jogjakarta/v2.png"
+                            class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="">
+                    </div>
+                    <!-- Slider controls -->
+                    <button type="button"
+                        class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        data-carousel-prev>
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M5 1 1 5l4 4" />
+                            </svg>
+                            <span class="sr-only">Previous</span>
+                        </span>
+                    </button>
+                    <button type="button"
+                        class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        data-carousel-next>
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 9 4-4-4-4" />
+                            </svg>
+                            <span class="sr-only">Next</span>
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-end w-full px-12">
+        <div class="h-2 w-1/2 bg-blue-600 rounded-lg flex justify-end"></div>
+    </div>
+
+    <div class="grid grid-cols-2 px-20 py-32">
+        <div class="grid gap-6 text-white py-10">
+            <h1 class="text-6xl grid items-end">
+                Sleman
+                <div class="h-2 w-1/2 bg-blue-600 rounded-lg"></div>
+            </h1>
+            <p class="items-start text-lg">Kabupaten Sleman memiliki banyak daya tarik tersendiri mulai dari alam sampai
+                situs percandian yang sangat gokill. Berikut kita sajikan tempat rekomendasinya
+            </p>
+            <div class="relative h-full w-full">
+                <button class="bg-blue-600 bg-opacity-50 rounded-lg absolute px-8 py-2">
+                    <a class="text-2xl " href="/src/menu.html">Get More</a>
+                </button>
+            </div>
+        </div>
+        <div class="flex justify-end h-full">
+            <div id="gallery" class="relative w-1/2 " data-carousel="slide">
+                <!-- Carousel wrapper -->
+                <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                    <!-- Item 1 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="/asset/menu-konten/sleman/v1.png"
+                            class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="">
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                        <img src="/asset/menu-konten/sleman/v2.png"
+                            class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="">
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                        <img src="/asset/menu-konten/sleman/v3.png"
+                            class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="">
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                        <img src="/asset/menu-konten/sleman/v4.png"
+                            class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="">
+                    </div>
+                    <!-- Slider controls -->
+                    <button type="button"
+                        class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        data-carousel-prev>
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M5 1 1 5l4 4" />
+                            </svg>
+                            <span class="sr-only">Previous</span>
+                        </span>
+                    </button>
+                    <button type="button"
+                        class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        data-carousel-next>
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 9 4-4-4-4" />
+                            </svg>
+                            <span class="sr-only">Next</span>
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="grid grid-cols-2 px-20 py-32">
+        <div class="grid gap-6 text-white py-10">
+            <h1 class="text-6xl grid items-end">
+                Bantul
+                <div class="h-2 w-1/2 bg-blue-600 rounded-lg"></div>
+            </h1>
+            <p class="items-start text-lg">Berikut beberapa tempat wisata di Kabupaten Bantul yang recommended dan juga
+                hits, sebagai bahan referensi awal tempat berlibur di weekend ini yang tidak kalah seru.
+            </p>
+            <div class="relative h-full w-full">
+                <button class="bg-blue-600 bg-opacity-50 rounded-lg absolute px-8 py-2">
+                    <a class="text-2xl " href="/src/menu.html">Get More</a>
+                </button>
+            </div>
+        </div>
+        <div class="flex justify-end h-full">
+            <div id="gallery" class="relative w-1/2 " data-carousel="slide">
+                <!-- Carousel wrapper -->
+                <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                    <!-- Item 1 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="/asset/menu-konten/bantul/v1.png"
+                            class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="">
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                        <img src="/asset/menu-konten/bantul/v2.png"
+                            class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="">
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                        <img src="/asset/menu-konten/bantul/v3.png"
+                            class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="">
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                        <img src="/asset/menu-konten/bantul/v4.png"
+                            class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="">
+                    </div>
+                    <!-- Slider controls -->
+                    <button type="button"
+                        class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        data-carousel-prev>
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M5 1 1 5l4 4" />
+                            </svg>
+                            <span class="sr-only">Previous</span>
+                        </span>
+                    </button>
+                    <button type="button"
+                        class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        data-carousel-next>
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 9 4-4-4-4" />
+                            </svg>
+                            <span class="sr-only">Next</span>
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="grid grid-cols-2 px-20 py-32">
+        <div class="grid gap-6 text-white py-10">
+            <h1 class="text-6xl grid items-end">
+                Gunung Kidul
+                <div class="h-2 w-1/2 bg-blue-600 rounded-lg"></div>
+            </h1>
+            <p class="items-start text-lg">Wisata di Kabupaten Gunung Kidul sangat populer oleh berbagai kalangan karena
+                memiliki sejumlah spot wisata yang seru untuk didatangi. Berikut kami berikan list wisata gunung kidul
+            </p>
+            <div class="relative h-full w-full">
+                <button class="bg-blue-600 bg-opacity-50 rounded-lg absolute px-8 py-2">
+                    <a class="text-2xl " href="/src/menu.html">Get More</a>
+                </button>
+            </div>
+        </div>
+        <div class="flex justify-end h-full">
+            <div id="gallery" class="relative w-1/2 " data-carousel="slide">
+                <!-- Carousel wrapper -->
+                <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                    <!-- Item 1 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="/asset/menu-konten/gunkid/v1.png"
+                            class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="">
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                        <img src="/asset/menu-konten/gunkid/v2.png"
+                            class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="">
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="/asset/menu-konten/gunkid/v3.png"
+                            class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="">
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="/asset/menu-konten/gunkid/v4.png"
+                            class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="">
+                    </div>
+                    <!-- Slider controls -->
+                    <button type="button"
+                        class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        data-carousel-prev>
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M5 1 1 5l4 4" />
+                            </svg>
+                            <span class="sr-only">Previous</span>
+                        </span>
+                    </button>
+                    <button type="button"
+                        class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        data-carousel-next>
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 9 4-4-4-4" />
+                            </svg>
+                            <span class="sr-only">Next</span>
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="grid grid-cols-2 px-20 py-32">
+        <div class="grid gap-6 text-white py-10">
+            <h1 class="text-6xl grid items-end">
+                Kulon Progo
+                <div class="h-2 w-1/2 bg-blue-600 rounded-lg"></div>
+            </h1>
+            <p class="items-start text-lg">Wisata alam di Kabupaten Kulon Progo tidak diragukam lagi apalagi alamnya
+                yang sangat menawan juga memiliki panorama yang tidak kalah menarik untuk di kunjungi. Berikut kita
+                sajikan tempat rekomendasinya
+            </p>
+            <div class="relative h-full w-full">
+                <button class="bg-blue-600 bg-opacity-50 rounded-lg absolute px-8 py-2">
+                    <a class="text-2xl " href="/src/menu.html">Get More</a>
+                </button>
+            </div>
+        </div>
+        <div class="flex justify-end h-full">
+            <div id="gallery" class="relative w-1/2 " data-carousel="slide">
+                <!-- Carousel wrapper -->
+                <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                    <!-- Item 1 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="/asset/menu-konten/kulprog/v1.png"
+                            class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="">
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                        <img src="/asset/menu-konten/kulprog//v2.png"
+                            class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="">
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                        <img src="/asset/menu-konten/kulprog//v3.png"
+                            class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="">
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                        <img src="/asset/menu-konten/kulprog//v4.png"
+                            class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="">
+                    </div>
+                    <!-- Slider controls -->
+                    <button type="button"
+                        class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        data-carousel-prev>
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M5 1 1 5l4 4" />
+                            </svg>
+                            <span class="sr-only">Previous</span>
+                        </span>
+                    </button>
+                    <button type="button"
+                        class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        data-carousel-next>
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 9 4-4-4-4" />
+                            </svg>
+                            <span class="sr-only">Next</span>
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="grid text-white gap-2 w-full">
+            <div class="grid justify-center">
+                <img class="" src="/asset/jogja 1.svg" alt="">
+            </div>
+            <h1 class="text-lg grid justify-center">About us:</h1>
+            <h1 class="text-lg grid justify-center text-blue-600 underline"><a href="">Visi Misi</a></h1>
+            <div class="grid justify-center items-center" style="justify-items: center !important;">
+                <h1 class="text-lg w-2/3 text-center"><a href="">Jl. Ring Road Utara, Ngringin,
+                        Condongcatur,
+                        Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281</a></h1>
+            </div>
+            <div class="grid justify-center py-4">
+                <div class="flex gap-6">
+                    <ion-icon class="w-8 h-8" name="logo-instagram"></ion-icon>
+                    <ion-icon class="w-8 h-8" name="logo-facebook"></ion-icon>
+                    <ion-icon class="w-8 h-8" name="logo-whatsapp"></ion-icon>
+                </div>
+            </div>
+        </div>
+        <div class="grid justify-center bg-blue-700 p-4 text-white">
+            <h1 class="text-lg font-bold">
+                Copyright © 2022 Kel6 web PTI
+            </h1>
+        </div>
+    </footer>
+    <script src="/src/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</body>
+
+</html>

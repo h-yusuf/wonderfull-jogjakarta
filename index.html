@@ -14,8 +14,11 @@
 </head>
 
 <body>
-    <nav class="px-8 py-1 fixed w-full top-0 linear-navbar flex justify-between items-center z-50">
-        <div class="flex gap-1">
+
+    <!-- navbar -->
+
+    <nav  class="px-8 py-1 fixed w-full top-0 linear-navbar flex justify-between items-center z-50">
+        <div class="flex gap-4">
             <img src="./asset/logo-jogja.svg" alt="" class="w-8">
             <img src="./asset/wonderfull .svg" alt="" class="w-18 mt-2">
         </div>
@@ -38,12 +41,15 @@
                             <a href="#" class="block px-4 py-2 hover:scale-110 hover:font-extrabold">Home</a>
                         </li>
                         <li>
-                            <a href="#" class="block px-4 py-2 hover:scale-110 hover:font-extrabold">Menu</a>
+                            <a href="/src/menu.html" class="block px-4 py-2 hover:scale-110 hover:font-extrabold">Menu</a>
                         </li>
                     </ul>
                 </div>
             </ul>
-
+            <!-- <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+            </button> -->
             <label class="switch ">
                 <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <g fill="#ffd43b">
@@ -65,8 +71,27 @@
 
         </div>
     </nav>
-    <div class="grid gap-12">
+    
+    <div class="fixed bottom-4 right-4 grid gap-4 z-50 text-white">
+        <ion-icon class="w-8 h-8" name="bus-outline"></ion-icon>
+        <a href="#slider" class="transition-all duration-300 ease-in ">
+            <ion-icon class="w-8 h-8" name="arrow-up-circle-outline"></ion-icon>
+        </a>
+    </div>
+
+    <div id="slider" class="grid gap-12">
         <div id="gallery" class="relative w-full h-screen " data-carousel="slide">
+            <div class="absolute w-full h-full bg-black opacity-20 z-30"></div>
+            <div class="absolute w-full h-full grid p-60  z-30  text-white">
+                <h1 class="text-3xl italic">Sugeng Rawuh </h1>
+                <h1 class="text-8xl">Plan Your Holiday in </h1>
+                <h1 class="text-9xl font-extrabold">YOGYAKARTA</h1>
+                <div class="relative h-full w-full">
+                    <button class="bg-blue-600 bg-opacity-50 rounded-lg absolute px-8 py-2">
+                        <a class="text-2xl " href="/src/menu.html">MENU</a>
+                    </button>
+                </div>
+            </div>
             <!-- Carousel wrapper -->
             <div class="relative h-full  overflow-hidden  ">
                 <!-- Item 1 -->
@@ -174,43 +199,84 @@
             <div class="grid gap-1 w-full overflow-auto">
                 <div class="grid grid-cols-2  gap-1">
                     <div class="grid grid-cols-3 gap-1 ">
-                        <img class="w-full h-80 hover:scale-105 transition duration-300 ease-in-out" src="/asset/konten pags/konten-17.png" alt="">
-                        <img class="w-full h-80 hover:scale-105 transition duration-300 ease-in-out" src="/asset/konten pags/konten-2.png" alt="">
-                        <img class="min-w-full h-80 hover:scale-105 transition" src="/asset/konten pags/konten-1.png" alt="">
+                        <img class="w-full h-80 hover:scale-105 transition duration-300 ease-in-out"
+                            src="/asset/konten pags/konten-17.png" alt="">
+                        <img class="w-full h-80 hover:scale-105 transition duration-300 ease-in-out"
+                            src="/asset/konten pags/konten-2.png" alt="">
+                        <img class="min-w-full h-80 hover:scale-105 transition" src="/asset/konten pags/konten-1.png"
+                            alt="">
                         <div class="flex gap-1 col-span-3">
-                        <img class="w-full hover:scale-105 transition duration-300 ease-in-out" src="/asset/konten pags/konten-15.png" alt="">
-                        <img class="w-full hover:scale-105 transition duration-300 ease-in-out" src="/asset/konten pags/konten-10.png" alt="">
+                            <img class="w-full hover:scale-105 transition duration-300 ease-in-out"
+                                src="/asset/konten pags/konten-15.png" alt="">
+                            <img class="w-full hover:scale-105 transition duration-300 ease-in-out"
+                                src="/asset/konten pags/konten-10.png" alt="">
                         </div>
                     </div>
                     <div class="grid grid-cols-3 gap-1 ">
-                        <img class="w-full h-80 hover:scale-105 transition duration-300 ease-in-out" src="/asset/konten pags/konten-17.png" alt="">
-                        <img class="w-full h-80 hover:scale-105 transition duration-300 ease-in-out" src="/asset/konten pags/konten-2.png" alt="">
-                        <img class="min-w-full h-80 hover:scale-105 transition" src="/asset/konten pags/konten-1.png" alt="">
+                        <img class="w-full h-80 hover:scale-105 transition duration-300 ease-in-out"
+                            src="/asset/konten pags/konten-17.png" alt="">
+                        <img class="w-full h-80 hover:scale-105 transition duration-300 ease-in-out"
+                            src="/asset/konten pags/konten-2.png" alt="">
+                        <img class="min-w-full h-80 hover:scale-105 transition" src="/asset/konten pags/konten-1.png"
+                            alt="">
                         <div class="flex gap-1 col-span-3">
-                        <img class="w-full hover:scale-105 transition duration-300 ease-in-out" src="/asset/konten pags/konten-15.png" alt="">
-                        <img class="w-full hover:scale-105 transition duration-300 ease-in-out" src="/asset/konten pags/konten-10.png" alt="">
+                            <img class="w-full hover:scale-105 transition duration-300 ease-in-out"
+                                src="/asset/konten pags/konten-15.png" alt="">
+                            <img class="w-full hover:scale-105 transition duration-300 ease-in-out"
+                                src="/asset/konten pags/konten-10.png" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="flex gap-1 h-48 ">
-                    <img class="hover:scale-105 w-full transition duration-300 ease-in-out" src="/asset/konten pags/konten-18.png" alt="">
-                    <img class="hover:scale-105 w-full transition duration-300 ease-in-out" src="/asset/konten pags/konten-9.png" alt="">
-                    <img class="hover:scale-105 w-full transition duration-300 ease-in-out" src="/asset/konten pags/konten-19.png" alt="">
-                    <img class="hover:scale-105 w-full transition duration-300 ease-in-out" src="/asset/konten pags/konten-13.png" alt="">
-                    <img class="hover:scale-105 w-full transition duration-300 ease-in-out" src="/asset/konten pags/konten-7.png" alt="">
-                    <img class="hover:scale-105 w-full transition duration-300 ease-in-out" src="/asset/konten pags/konten-3.png" alt="">
+                    <img class="hover:scale-105 w-full transition duration-300 ease-in-out"
+                        src="/asset/konten pags/konten-18.png" alt="">
+                    <img class="hover:scale-105 w-full transition duration-300 ease-in-out"
+                        src="/asset/konten pags/konten-9.png" alt="">
+                    <img class="hover:scale-105 w-full transition duration-300 ease-in-out"
+                        src="/asset/konten pags/konten-19.png" alt="">
+                    <img class="hover:scale-105 w-full transition duration-300 ease-in-out"
+                        src="/asset/konten pags/konten-13.png" alt="">
+                    <img class="hover:scale-105 w-full transition duration-300 ease-in-out"
+                        src="/asset/konten pags/konten-7.png" alt="">
+                    <img class="hover:scale-105 w-full transition duration-300 ease-in-out"
+                        src="/asset/konten pags/konten-3.png" alt="">
                 </div>
             </div>
         </div>
 
-            <!-- Navbar -->
+        <!-- Footer -->
         
-        .fle
-
+        <footer>
+            <div class="grid text-white gap-2 w-full">
+                <div class="grid justify-center">
+                    <img class="" src="/asset/jogja 1.svg" alt="">
+                </div>
+                <h1 class="text-lg grid justify-center">About us:</h1>
+                <h1 class="text-lg grid justify-center text-blue-600 underline"><a href="">Visi Misi</a></h1>
+                <div class="grid justify-center items-center" style="justify-items: center !important;">
+                    <h1 class="text-lg w-2/3 text-center"><a href="">Jl. Ring Road Utara, Ngringin,
+                            Condongcatur,
+                            Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281</a></h1>
+                </div>
+                <div class="grid justify-center py-4">
+                    <div class="flex gap-6">
+                        <ion-icon class="w-8 h-8" name="logo-instagram"></ion-icon>
+                        <ion-icon class="w-8 h-8" name="logo-facebook"></ion-icon>
+                        <ion-icon class="w-8 h-8" name="logo-whatsapp"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <div class="grid justify-center bg-blue-700 p-4 text-white">
+                <h1 class="text-lg font-bold">
+                    Copyright © 2022 Kel6 web PTI
+                </h1>
+            </div>
+        </footer>
     </div>
+    <script src="/src/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
-
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>
 
 </html>

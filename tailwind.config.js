@@ -4,8 +4,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "roboto"  : "roboto",
-        "poppins" : "poppins"
+        "roboto"  : "Roboto",
+        "poppins" : "Poppins",
+        "gread-vibes": "Great Vibes, cursive"
       }
     },
   },
